@@ -1,1 +1,1 @@
-__NOTE__: Open source after the paper get published  
+__NOTE__: Instructions for running the code will be released after the paper get published.  
