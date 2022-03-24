@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 #
-# Copyright 2019 Carter Yagemann
-#
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
@@ -36,17 +34,7 @@ def get_pid_list(source):
 
 
 def disasm_pt_file(trace_path, event='block', pids=None):
-    """Disassembles a PT trace, returning a list of events.
-
-    By default, block events are yielded. See disasm_events for other possible events.
-    For events that contain multiple values (e.g. xpage), the resulting list will contain
-    tuples. Values are automatically encoded into sane representations. For example, numbers
-    will be ints, not strs.
-
-    By default, events for all PIDs are returned. Passing an int or list of ints as pids will
-    filter inclusively.
-
-    Raises PTNotFound if pt cannot be located and DisasmError if something goes wrong.
+    """Disassembles a etm trace, returning a list of events.
 
     Returns a list of event values.
     """
