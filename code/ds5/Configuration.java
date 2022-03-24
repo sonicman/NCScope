@@ -1,5 +1,3 @@
-package hk.polyu;
-
 public class Configuration {
 	
 	// ---- constants related to customizing DS-5 ---- //

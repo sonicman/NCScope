@@ -1,8 +1,5 @@
-package hk.polyu.repackage;
-
 import java.util.List;
 
-import hk.polyu.Configuration;
 import soot.PackManager;
 import soot.Scene;
 import soot.options.Options;

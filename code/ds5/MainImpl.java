@@ -1,16 +1,8 @@
-package hk.polyu;
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
-
-import hk.polyu.repackage.ParseETMv4TraceSource;
-import hk.polyu.repackage.ParseNewTraceReportCommand;
-import hk.polyu.repackage.ParseTraceReaderDTSL;
-import hk.polyu.repackage.SootEnvironment;
-import hk.polyu.utility.BashRunner;
 
 public class MainImpl {
 	
