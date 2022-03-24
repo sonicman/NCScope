@@ -844,7 +844,7 @@ def main():
 
     bin_dir = os.path.join(snapshot_dir, 'bin/')
     # bin_temp = tempfile.mkdtemp(prefix='analysis-')
-    rootdir = "/home/zhouhao/AOSP/ARCUS/tools/angr/tmp"
+    rootdir = "/home/****/AOSP/ARCUS/tools/angr/tmp"
     tmpname = "analysis-" + str(int(time.time()))
     tmpdir = os.path.join(rootdir, tmpname)
     os.mkdir(tmpdir)
@@ -1091,7 +1091,7 @@ if __name__ == '__main__':
 import time
 if __name__ == '__main__':
     # create tmpdir
-    rootdir = "/home/zhouhao/AOSP/ARCUS/tools/angr/tmp"
+    rootdir = "/home/****/AOSP/ARCUS/tools/angr/tmp"
     if os.path.exists(rootdir) and os.path.isdir(rootdir):
         shutil.rmtree(rootdir)
     os.mkdir(rootdir)
@@ -1102,8 +1102,8 @@ if __name__ == '__main__':
     # configure sys.argv
     sys.argv.append("--save-reports")
     sys.argv.append(tmpdir)
-    # sys.argv.append("/home/zhouhao/AOSP/ARCUS/tools/angr/test/test-data/traces/etm-uaf-01-ben")
-    sys.argv.append("/home/zhouhao/AOSP/ARCUS/tools/angr/test/test-data/traces/etm-df-01-ben")
+    # sys.argv.append("/home/****/AOSP/ARCUS/tools/angr/test/test-data/traces/etm-uaf-01-ben")
+    sys.argv.append("/home/****/AOSP/ARCUS/tools/angr/test/test-data/traces/etm-df-01-ben")
 
     signal.signal(signal.SIGTERM, sigterm_handler)
     __name__ = 'analysis'
