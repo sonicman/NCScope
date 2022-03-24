@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 #
-# Copyright 2019 Carter Yagemann
-#
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
@@ -89,15 +87,15 @@ class Tracer(ExplorationTechnique):
         simgr.one_active.globals['trace_idx'] = idx
         simgr.one_active.globals['sync_idx'] = None
         simgr.one_active.globals['sync_timer'] = 0
-        simgr.one_active.globals['call_depth'] = 5  # polyu
+        simgr.one_active.globals['call_depth'] = 5  # ****
         simgr.one_active.deep['frame_addrs'] = list()
 
     def complete(self, simgr):
-        log.info("[polyu] => complete")  # polyu
+        log.info("[****] => complete")  # ****
         return bool(simgr.traced)
 
     def filter(self, simgr, state, **kwargs):
-        log.info("[polyu] => filter")  # polyu
+        log.info("[****] => filter")  # ****
         # check completion
         if state.globals['trace_idx'] >= len(self._trace) - 1:
             return 'traced'
@@ -122,19 +120,19 @@ class Tracer(ExplorationTechnique):
         return simgr.filter(state, **kwargs)
 
     def step(self, simgr, stash='active', **kwargs):
-        log.info("[polyu] => step")  # polyu
+        log.info("[****] => step")  # ****
         simgr.drop(stash='missed')
         return simgr.step(stash=stash, **kwargs)
 
     def step_state(self, simgr, state, **kwargs):
-        log.info("[polyu] => step_state")  # polyu
+        log.info("[****] => step_state")  # ****
         # maintain the predecessors list
         self.predecessors.append(state)
 
         # perform the step, ask qemu to stop at the termination point
         stops = set(kwargs.pop('extra_stop_points', ())) | {self._trace[-1]}
         succs_dict = simgr.step_state(state, extra_stop_points=stops, **kwargs)
-        log.info("succs_dict: %s" % succs_dict)  # polyu
+        log.info("succs_dict: %s" % succs_dict)  # ****
 
         # failed to find a state that follows the traced path
         if not None in succs_dict:
@@ -166,19 +164,19 @@ class Tracer(ExplorationTechnique):
         assert len(succs) > 0
         idx = succs[0].globals['trace_idx']
         trace_addr = self._trace[idx + 1]
-        log.info("trace_addr: %#x" % trace_addr)  # polyu
+        log.info("trace_addr: %#x" % trace_addr)  # ****
 
         prev_vex = succs[0].block(succs[0].history.bbl_addrs[-1]).vex
         prev_cap = succs[0].block(succs[0].history.bbl_addrs[-1]).capstone
         trace_addr_test = prev_vex.addr + prev_vex.size
-        log.info("trace_addr_test: %#x" % trace_addr_test)  # polyu
+        log.info("trace_addr_test: %#x" % trace_addr_test)  # ****
 
         res = []
         for succ in succs:
             try:
                 if trace_addr == succ.addr:
                     res.append(succ)
-                    log.info("_pick_correct_successor: case-0a")  # polyu
+                    log.info("_pick_correct_successor: case-0a")  # ****
             except AngrTracerError:
                 pass
 
@@ -187,14 +185,14 @@ class Tracer(ExplorationTechnique):
                 try:
                     if trace_addr_test == succ.addr:
                         res.append(succ)
-                        log.info("_pick_correct_successor: case-0b")  # polyu
+                        log.info("_pick_correct_successor: case-0b")  # ****
                 except AngrTracerError:
                     pass
 
         if not res:
-            log.info("trace_addr_test: %#x" % trace_addr_test)  # polyu
+            log.info("trace_addr_test: %#x" % trace_addr_test)  # ****
             if trace_addr > prev_vex.addr and trace_addr < (prev_vex.addr + prev_vex.size):
-                log.info("_pick_correct_successor: case-1")  # polyu
+                log.info("_pick_correct_successor: case-1")  # ****
                 # the trace address is in the middle of the last executed block
                 # next trace address should match one of the successor states
                 next_trace_addr = self._trace[idx + 2]
@@ -209,7 +207,7 @@ class Tracer(ExplorationTechnique):
                     log.error("Trace is in the middle of block %#x, cannot find %#x or %#x from %s" % (prev_vex.addr, trace_addr, next_trace_addr, str(succs)))
                     raise AngrTracerError("Cannot find next trace address")
             elif prev_cap.insns[-1].mnemonic.startswith('rep'):
-                log.info("_pick_correct_successor: case-2")  # polyu
+                log.info("_pick_correct_successor: case-2")  # ****
                 log.warn("State split at rep instruction: %s" % prev_cap.insns[-1].mnemonic)
                 rep_con, rep_op = prev_cap.insns[-1].mnemonic.split(' ')[:2]
                 if rep_op == 'cmpsb':
@@ -242,7 +240,7 @@ class Tracer(ExplorationTechnique):
                 else:
                     raise AngrTracerError("Unhandled split caused by repeat: %s" % prev_cap.insns[-1].mnemonic)
             else:
-                log.info("_pick_correct_successor: case-3")  # polyu
+                log.info("_pick_correct_successor: case-3")  # ****
                 log.debug(succs[0].block(succs[0].history.bbl_addrs[-1]).capstone.insns)
                 log.error("Looking for successor %#x, only have: %s" % (trace_addr, ','.join([hex(succ.addr) for succ in succs])))
                 raise AngrTracerError("No states followed the trace?")
@@ -252,7 +250,7 @@ class Tracer(ExplorationTechnique):
 
         # check whether we should update self._trace
         if len(res) == 1 and trace_addr_test == res[0].addr:
-            log.info("_pick_correct_successor: update self._trace")  # polyu
+            log.info("_pick_correct_successor: update self._trace")  # ****
             self._trace.insert(idx + 1, trace_addr_test)
 
         self._update_state_tracking(res[0])
