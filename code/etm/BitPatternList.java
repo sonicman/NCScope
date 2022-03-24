@@ -1,5 +1,3 @@
-package hk.polyu.trace.decode;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 

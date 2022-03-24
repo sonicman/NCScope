@@ -1,11 +1,4 @@
-package hk.polyu.trace.analysis.unpack;
-
 import java.util.Stack;
-
-import hk.polyu.Configuration;
-import hk.polyu.trace.decode.ETMv4Decoder.AddressRegister;
-import hk.polyu.trace.resolver.ArtInstruction;
-import hk.polyu.trace.resolver.ArtMethod;
 
 public class InvocationChainBuilder {
 	

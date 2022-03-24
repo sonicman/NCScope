@@ -1,5 +1,3 @@
-package hk.polyu.trace.decode;
-
 public class TraceWarningRecord extends TraceMessageRecord {
 
 	public TraceWarningRecord(String text) {

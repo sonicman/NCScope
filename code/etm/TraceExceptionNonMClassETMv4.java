@@ -1,5 +1,3 @@
-package hk.polyu.trace.decode;
-
 public enum TraceExceptionNonMClassETMv4 implements ITraceException {
 
 	PE_RESET("PE_RESET", 0), 

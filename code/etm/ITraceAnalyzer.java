@@ -1,5 +1,3 @@
-package hk.polyu.trace.analysis;
-
 import hk.polyu.trace.decode.TraceRecord;
 import hk.polyu.trace.decode.exception.TraceDecodeStopException;
 

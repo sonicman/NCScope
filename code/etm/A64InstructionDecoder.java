@@ -1,5 +1,3 @@
-package hk.polyu.trace.decode;
-
 import java.util.ArrayList;
 
 import com.arm.debug.icodec.Instruction;

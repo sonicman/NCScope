@@ -1,5 +1,3 @@
-package hk.polyu.trace.decode;
-
 public class TraceRecordRegressiveTimestamp extends TraceMessageRecord {
 
 	private long mTimestamp;

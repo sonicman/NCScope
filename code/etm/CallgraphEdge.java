@@ -1,5 +1,3 @@
-package hk.polyu.trace.analysis.cg;
-
 public class CallgraphEdge {
 	
 	private CallgraphNode callerNode;

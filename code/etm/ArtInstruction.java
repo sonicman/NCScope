@@ -1,5 +1,3 @@
-package hk.polyu.trace.resolver;
-
 import java.util.HashMap;
 
 import com.arm.debug.icodec.Instruction;
@@ -12,8 +10,6 @@ import com.arm.debug.icodec.swig.GenericInstruction;
 import com.arm.debug.icodec.swig.GenericInstructionMajorOpcode;
 import com.arm.debug.icodec.swig.GenericProcStateOperation;
 import com.arm.debug.icodec.swig.GenericRegisterModel;
-
-import hk.polyu.trace.decode.A64InstructionDecoder;
 
 public class ArtInstruction {
 	// fake instructions

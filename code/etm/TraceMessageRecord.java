@@ -1,5 +1,3 @@
-package hk.polyu.trace.decode;
-
 public abstract class TraceMessageRecord extends TraceRecord {
 	
 	private String mMessageText;

@@ -1,5 +1,3 @@
-package hk.polyu.trace.decode;
-
 public class GenericTraceException implements ITraceException {
 	
 	private String mTitle;

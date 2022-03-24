@@ -1,5 +1,3 @@
-package hk.polyu.utility;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.ProcessBuilder.Redirect;

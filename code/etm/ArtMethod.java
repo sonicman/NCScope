@@ -1,5 +1,3 @@
-package hk.polyu.trace.resolver;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 

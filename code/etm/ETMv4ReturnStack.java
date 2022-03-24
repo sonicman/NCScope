@@ -1,7 +1,3 @@
-package hk.polyu.trace.decode;
-
-import hk.polyu.trace.decode.ETMv4Decoder.AddressRegister;
-
 public class ETMv4ReturnStack {
 	
 	private static int RETURN_STACK_SIZE = 16;

@@ -1,5 +1,3 @@
-package hk.polyu.trace.analysis.cg;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,9 +14,6 @@ import org.gephi.io.exporter.spi.GraphExporter;
 import org.gephi.project.api.ProjectController;
 import org.gephi.project.api.Workspace;
 import org.openide.util.Lookup;
-
-import hk.polyu.Configuration;
-import hk.polyu.trace.resolver.ArtMethod;
 
 public class Callgraph {
 	// raw graph

@@ -1,5 +1,3 @@
-package hk.polyu.utility;
-
 import java.lang.management.ManagementFactory;
 import com.sun.management.OperatingSystemMXBean;
 

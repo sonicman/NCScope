@@ -1,5 +1,4 @@
 /*
-package hk.polyu.deprecated;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -11,14 +10,12 @@ import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
 
-import hk.polyu.Configuration;
-
 public class ObjdumpSystemOatARM64 {
 	private static String ObjdumpPrefix = "objdump_";
 	
-	private static String ObjdumpBin = "/home/zhouhao/Android/android-ndk-r17b/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-objdump";	
+	private static String ObjdumpBin = "/home/****/Android/android-ndk-r17b/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-objdump";	
 	
-	private static String SystemOatDirectory = "/media/zhouhao/337B-3308/android/system/framework/arm64/";
+	private static String SystemOatDirectory = "/media/****/337B-3308/android/system/framework/arm64/";
 	
 	private static String OutputDirectory = "output_PreprocessScript/";
 	

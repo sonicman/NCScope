@@ -1,5 +1,3 @@
-package hk.polyu.utility;
-
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -13,7 +11,7 @@ import java.util.ArrayList;
 public class OatdumpSystemOatARM32 {
 	
 	private static String OatdumpBin = "oatdump";
-	private static String SystemOatDirectory = "/media/zhouhao/27E6-0188/android/system/framework/arm/"; // <- adjust this constant
+	private static String SystemOatDirectory = "/media/****/27E6-0188/android/system/framework/arm/"; // <- adjust this constant
 	private static String OutputDirectory = "PreprocessScripts/";
 	
 	private static ArrayList<File> oats = new ArrayList<File>();

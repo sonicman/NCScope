@@ -1,8 +1,4 @@
-package hk.polyu.trace.decode;
-
 import java.util.ArrayList;
-
-import hk.polyu.trace.resolver.ArtMethod;
 
 public abstract class TraceRecord {
 	

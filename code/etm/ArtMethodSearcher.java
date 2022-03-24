@@ -1,9 +1,5 @@
-package hk.polyu.trace.resolver;
-
 import java.util.ArrayList;
 import java.util.Arrays;
-
-import hk.polyu.utility.BashRunner;
 
 public class ArtMethodSearcher {
 	

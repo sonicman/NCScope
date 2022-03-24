@@ -1,5 +1,3 @@
-package hk.polyu.utility;
-
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -10,13 +8,11 @@ import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
 
-import hk.polyu.Configuration;
-
 public class ObjdumpSystemLibraryHeaderARM32 {
 
-	private static String ObjdumpBin = "/home/zhouhao/Android/android-ndk-r17b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-objdump";	
-	private static String SystemLibraryDirectory = "/media/zhouhao/D313-DBB3/android/system/lib/"; // <- adjust this constant
-	private static String VendorLibraryDirectory = "/media/zhouhao/D313-DBB3/android/vendor/lib/"; // <- adjust this constant
+	private static String ObjdumpBin = "/home/****/Android/android-ndk-r17b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-objdump";	
+	private static String SystemLibraryDirectory = "/media/****/D313-DBB3/android/system/lib/"; // <- adjust this constant
+	private static String VendorLibraryDirectory = "/media/****/D313-DBB3/android/vendor/lib/"; // <- adjust this constant
 	
 	private static String OutputDirectory = "PreprocessScripts/";
 	

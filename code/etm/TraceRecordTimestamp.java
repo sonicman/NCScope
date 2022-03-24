@@ -1,5 +1,3 @@
-package hk.polyu.trace.decode;
-
 public class TraceRecordTimestamp extends TraceMessageRecord implements Comparable<TraceRecordTimestamp> {
 	
 	private long mTimestamp;

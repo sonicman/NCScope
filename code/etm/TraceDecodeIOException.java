@@ -1,5 +1,3 @@
-package hk.polyu.trace.decode.exception;
-
 import java.io.IOException;
 
 public class TraceDecodeIOException extends TraceDecodeStopException {

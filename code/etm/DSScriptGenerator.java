@@ -1,5 +1,3 @@
-package hk.polyu.trace.analysis;
-
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -11,12 +9,6 @@ import java.util.Queue;
 import org.gephi.graph.api.DirectedGraph;
 import org.gephi.graph.api.Edge;
 import org.gephi.graph.api.Node;
-
-import hk.polyu.Configuration;
-import hk.polyu.trace.analysis.cg.Callgraph;
-import hk.polyu.trace.analysis.cg.CallgraphBuilder;
-import hk.polyu.trace.resolver.ArtInstruction;
-import hk.polyu.trace.resolver.ArtMethod;
 
 public class DSScriptGenerator {
 	
@@ -46,7 +38,7 @@ public class DSScriptGenerator {
 		
 		// TODO:
 		
-		entryMethodSignatures.add("hk.polyu.junodemo.MainActivity$1: void hk.polyu.junodemo.MainActivity$1.onClick(android.view.View)");
+		entryMethodSignatures.add("hk.****.junodemo.MainActivity$1: void hk.****.junodemo.MainActivity$1.onClick(android.view.View)");
 		for (String methodSignature : entryMethodSignatures) {
 			Node curNode = callgraph.getGephiNode(methodSignature);
 			entryMethodNodes.add(curNode);

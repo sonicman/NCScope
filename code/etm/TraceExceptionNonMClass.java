@@ -1,5 +1,3 @@
-package hk.polyu.trace.decode;
-
 public enum TraceExceptionNonMClass implements ITraceException {
 	
 	NO_EXCEPTION("NO_EXCEPTION", 0), 

@@ -1,10 +1,5 @@
-package hk.polyu.trace.analysis;
-
 import java.util.ArrayList;
 import java.util.HashMap;
-
-import hk.polyu.trace.decode.ETMv4Decoder;
-import hk.polyu.trace.resolver.ArtInstruction;
 
 public class TransformOpcode2Vex {
 	private static TransformOpcode2Vex singleInstance = null;

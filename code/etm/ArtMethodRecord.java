@@ -1,7 +1,3 @@
-package hk.polyu.trace.decode;
-
-import hk.polyu.trace.resolver.ArtMethod;
-
 public class ArtMethodRecord extends TraceRecord {
 
 	private ArtMethod mArtMethod;

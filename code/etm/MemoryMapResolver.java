@@ -1,5 +1,3 @@
-package hk.polyu.trace.resolver;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -7,9 +5,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.HashSet;
-
-import hk.polyu.Configuration;
-import hk.polyu.trace.resolver.MemoryBlock.MemoryBlockOwner;
 
 /*
  * -- Notice --

@@ -1,5 +1,3 @@
-package hk.polyu.trace.decode;
-
 public class BitPattern {
 
 	public static int mask(final String pattern) {

@@ -1,7 +1,3 @@
-package hk.polyu.trace.analysis.cg;
-
-import hk.polyu.trace.resolver.ArtMethod;
-
 public class CallgraphNode {
 
 	private ArtMethod mMethod;

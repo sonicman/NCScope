@@ -1,5 +1,3 @@
-package hk.polyu.trace.decode;
-
 public class TraceExceptionRecord extends TraceMessageRecord {
 
 	private boolean mCanceled;

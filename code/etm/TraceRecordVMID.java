@@ -1,5 +1,3 @@
-package hk.polyu.trace.decode;
-
 public class TraceRecordVMID extends TraceMessageRecord {
 
 	public TraceRecordVMID(String text) {

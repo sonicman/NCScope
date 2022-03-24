@@ -1,5 +1,3 @@
-package hk.polyu.trace.resolver;
-
 /*
  * -- Notice --
  * MemoryBlock abstracts a memory chunk with its start address and end address.

@@ -1,32 +1,9 @@
-package hk.polyu.trace.decode;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;
-
-import hk.polyu.Configuration;
-import hk.polyu.trace.analysis.TraceReporter;
-import hk.polyu.trace.analysis.cg.Callgraph;
-import hk.polyu.trace.analysis.cg.CallgraphBuilder;
-import hk.polyu.trace.analysis.unpack.InvocationChainBuilder;
-import hk.polyu.trace.analysis.unpack.InvocationChainReporter;
-import hk.polyu.trace.decode.exception.TraceCorruptedException;
-import hk.polyu.trace.decode.exception.TraceDecodeEndOfBufferException;
-import hk.polyu.trace.decode.exception.TraceDecodeIOException;
-import hk.polyu.trace.decode.exception.TraceDecodeStopException;
-import hk.polyu.trace.resolver.ArtInstruction;
-import hk.polyu.trace.resolver.ArtMethod;
-import hk.polyu.trace.resolver.ArtMethodSearcher;
-import hk.polyu.trace.resolver.MemoryBlock;
-import hk.polyu.trace.resolver.MemoryBlock.MemoryBlockOwner;
-import hk.polyu.trace.resolver.MemoryMapResolver;
-import hk.polyu.trace.resolver.OATDumpResolver;
-import hk.polyu.trace.resolver.OBJDumpHeaderResolver;
-import hk.polyu.trace.resolver.OBJDumpResolver;
-import hk.polyu.utility.PerformanceMonitor;
 
 public class ETMv4Decoder extends TraceDecoderAbstract {
 	
@@ -2051,8 +2028,8 @@ public class ETMv4Decoder extends TraceDecoderAbstract {
 	
 	public static void main(String[] args) {
 		
-		System.load("/home/zhouhao/juno_backup/DS5_workspace/DTSLDecode/lib/libicodec.so");
-		// System.load("/home/zhouhao/juno_backup/DS5_workspace/DTSLDecode/lib/libVex.so");
+		System.load("/home/****/juno_backup/DS5_workspace/DTSLDecode/lib/libicodec.so");
+		// System.load("/home/****/juno_backup/DS5_workspace/DTSLDecode/lib/libVex.so");
 		
 		boolean isArm = false;
 		boolean isAArch64 = false;

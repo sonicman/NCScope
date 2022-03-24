@@ -1,12 +1,3 @@
-package hk.polyu.trace.analysis.cg;
-
-import hk.polyu.trace.analysis.ITraceAnalyzer;
-import hk.polyu.trace.decode.ArtInstructionRecord;
-import hk.polyu.trace.decode.TraceRecord;
-import hk.polyu.trace.decode.exception.TraceDecodeStopException;
-import hk.polyu.trace.resolver.ArtInstruction;
-import hk.polyu.trace.resolver.ArtMethod;
-
 public class CallgraphBuilder implements ITraceAnalyzer {
 	
 	private static CallgraphBuilder singleInstance = null;

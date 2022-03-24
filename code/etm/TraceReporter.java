@@ -1,13 +1,7 @@
-package hk.polyu.trace.analysis;
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-
-import hk.polyu.Configuration;
-import hk.polyu.trace.decode.TraceRecord;
-import hk.polyu.trace.decode.exception.TraceDecodeStopException;
 
 public class TraceReporter implements ITraceAnalyzer {
 	

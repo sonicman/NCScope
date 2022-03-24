@@ -1,8 +1,3 @@
-package hk.polyu.trace.decode;
-
-import hk.polyu.trace.resolver.ArtInstruction;
-import hk.polyu.trace.resolver.ArtMethod;
-
 public class ArtInstructionRecord extends TraceRecord {
 
 	public static int INTERNAL_BRANCH_FORWARD = 1;

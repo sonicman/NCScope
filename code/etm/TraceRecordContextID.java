@@ -1,5 +1,3 @@
-package hk.polyu.trace.decode;
-
 public class TraceRecordContextID extends TraceMessageRecord {
 	
 	public TraceRecordContextID(String text) {
