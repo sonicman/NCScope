@@ -766,8 +766,8 @@ def main():
 
     set_log_levels(options)
 
-    log.info("[polyu] options: %s" % options)  # polyu
-    log.info("[polyu] args: %s" % args)  # polyu
+    log.info("[****] options: %s" % options)  # ****
+    log.info("[****] args: %s" % args)  # ****
 
     trace_dir = args[0]
     input_trace_candidates = ['trace']
@@ -832,7 +832,7 @@ def main():
         log.error("Cannot find specified PID %d in trace: %s" % (options.pid, str(trace_pids)))
         return
 
-    # log.info("[polyu] bb_seq: %s" % bb_seq)  # polyu
+    # log.info("[****] bb_seq: %s" % bb_seq)  # ****
 
     if not options.api_snapshot is None:
         # PT recorded the full trace, but user wants to start at an API snapshot, so
@@ -877,10 +877,10 @@ def main():
             shutil.rmtree(bin_temp)
             return
 
-    log.info("[polyu] main_fp: %s" % main_fp)  # polyu
-    log.info("[polyu] main_opts: %s" % main_opts)  # polyu
-    log.info("[polyu] lib_files: %s" % lib_files)  # polyu
-    log.info("[polyu] lib_opts: %s" % lib_opts)  # polyu
+    log.info("[****] main_fp: %s" % main_fp)  # ****
+    log.info("[****] main_opts: %s" % main_opts)  # ****
+    log.info("[****] lib_files: %s" % lib_files)  # ****
+    log.info("[****] lib_opts: %s" % lib_opts)  # ****
     proj = angr.Project(main_fp, main_opts=main_opts, force_load_libs=lib_files, lib_opts=lib_opts,
             use_sim_procedures=True, except_missing_libs=False, ld_path=[bin_temp], use_system_libs=False)
 
@@ -947,7 +947,7 @@ def main():
     log.info("Starting symbolic analysis")
     analysis_start_time = datetime.now()
     bug_stashes = [module.stash_name for module in list(plugins.detectors.loaded.values())]
-    log.info("[polyu] bug_stashes: %s" % str(bug_stashes))  # polyu
+    log.info("[****] bug_stashes: %s" % str(bug_stashes))  # ****
     for detector in list(plugins.detectors.loaded.values()):
         detector.active = True
     try:
@@ -957,11 +957,11 @@ def main():
 
         mem_mgr.enable()
         while len(simgr.stashes['active']) > 0:
-            # log.info("[polyu] addr-0: %#x" % simgr.one_active.addr)  # polyu
-            log.info("[polyu] addr-0: %s" % str(simgr.active))  # polyu
+            # log.info("[****] addr-0: %#x" % simgr.one_active.addr)  # ****
+            log.info("[****] addr-0: %s" % str(simgr.active))  # ****
             simgr.step()
-            # log.info("[polyu] addr-1: %#x" % simgr.one_active.addr)  # polyu
-            log.info("[polyu] addr-1: %s" % str(simgr.active))  # polyu
+            # log.info("[****] addr-1: %#x" % simgr.one_active.addr)  # ****
+            log.info("[****] addr-1: %s" % str(simgr.active))  # ****
             if len(simgr.stashes['active']) > 0:
                 active_state = simgr.stashes['active'][0]
 
@@ -1087,7 +1087,7 @@ if __name__ == '__main__':
     main()
 '''
 
-# main function for unit test (polyu)
+# main function for unit test (****)
 import time
 if __name__ == '__main__':
     # create tmpdir
